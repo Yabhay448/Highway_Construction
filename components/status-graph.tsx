@@ -87,16 +87,14 @@ export default function StatusGraph() {
                     <div key={index} className="h-12 flex items-center">
                       <div className="flex-1 relative px-4">
                         <div
-                          className="absolute h-6 rounded-full bg-primary/80 group-hover:bg-primary transition-colors"
+                          className="absolute h-3 bg-primary/80 rounded-full" // Changed from h-6 to h-1, removed rounded-full and other styles
                           style={{
                             left: `${startPos}%`,
                             width: `${Math.max(duration, 1)}%`,
-                            minWidth: '24px'
+                            top: '50%',
+                            transform: 'translateY(-50%)'
                           }}
-                        >
-                          <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary" />
-                          <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary" />
-                        </div>
+                        />
                       </div>
                     </div>
                   )
